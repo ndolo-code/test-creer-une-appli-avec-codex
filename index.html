@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FocusFlow - Études Pomodoro</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header>
+        <h1>🍅 FocusFlow</h1>
+        <p>Application de concentration avec méthode Pomodoro pour tes études.</p>
+      </header>
+
+      <section class="timer-card">
+        <h2 id="phaseLabel">Session de travail</h2>
+        <p class="timer" id="timerDisplay">25:00</p>
+
+        <div class="controls">
+          <button id="startPauseBtn">Démarrer</button>
+          <button id="resetBtn" class="ghost">Réinitialiser</button>
+          <button id="skipBtn" class="ghost">Passer</button>
+        </div>
+      </section>
+
+      <section class="settings-card">
+        <h3>Réglages</h3>
+        <div class="setting-row">
+          <label for="workMinutes">Travail (min)</label>
+          <input id="workMinutes" type="number" min="1" max="120" value="25" />
+        </div>
+        <div class="setting-row">
+          <label for="breakMinutes">Pause (min)</label>
+          <input id="breakMinutes" type="number" min="1" max="60" value="5" />
+        </div>
+        <div class="setting-row">
+          <label for="longBreakMinutes">Grande pause (min)</label>
+          <input id="longBreakMinutes" type="number" min="5" max="120" value="15" />
+        </div>
+        <div class="setting-row">
+          <label for="cyclesBeforeLongBreak">Cycles avant grande pause</label>
+          <input id="cyclesBeforeLongBreak" type="number" min="2" max="8" value="4" />
+        </div>
+      </section>
+
+      <section class="stats-card">
+        <h3>Suivi d'étude</h3>
+        <p>Pomodoros terminés aujourd'hui : <strong id="completedCount">0</strong></p>
+        <p>Phase en cours : <strong id="currentPhase">Travail</strong></p>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
